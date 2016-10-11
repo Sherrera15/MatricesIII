@@ -205,6 +205,7 @@ public class Helper {
     }
 
     public static String recorridoDiagonalSecundariaAbajo(int[][] m) {
+        
         int nf = m.length;
         int nc = m[0].length;
         String aux = "";
@@ -217,6 +218,7 @@ public class Helper {
     }
 
     public static String recorridoDiagonalSecundariaArriba(int[][] m) {
+        
         int nf = m.length;
         int nc = m[0].length;
         String aux = "";
@@ -264,6 +266,7 @@ public class Helper {
     }
 
     public static String recorridoDiagonalPrincipalArriba(int[][] m, int in, int fin) {
+        
         int nf = m.length;
         String aux = "";
         for (int i = in; i >= fin; i--) {

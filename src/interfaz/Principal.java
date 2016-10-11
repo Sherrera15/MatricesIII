@@ -239,7 +239,7 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmdCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCrearActionPerformed
-    
+
         if (txtNumerodeFilas.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Ingrese No. Filas", "Error", JOptionPane.ERROR_MESSAGE);
             txtNumerodeFilas.requestFocusInWindow();
@@ -277,11 +277,10 @@ public class Principal extends javax.swing.JFrame {
             } else if (nc != nf) {
                 JOptionPane.showMessageDialog(this, "Se desea que el No. Filas sean iguales al No. Columnas");
 
-            }else if (nf % 2 == 0 && nc % 2 == 0) {
-            JOptionPane.showMessageDialog(this, "El No. Filas y el No. Columnas deben ser impares");
-            
-            } 
-            else if (nc > 11 || nf > 11) {
+            } else if (nf % 2 == 0 && nc % 2 == 0) {
+                JOptionPane.showMessageDialog(this, "El No. Filas y el No. Columnas deben ser impares");
+
+            } else if (nc > 11 || nf > 11) {
                 JOptionPane.showMessageDialog(this, "No se aceptan No. Filas, ni No. de Columnas mayor a 11 ", "Error", JOptionPane.ERROR_MESSAGE);
                 txtNumerodeColumnas.selectAll();
                 txtNumerodeFilas.selectAll();
@@ -313,6 +312,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_cmdCrearActionPerformed
 
     private void cmdLlenadoAutomaticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdLlenadoAutomaticoActionPerformed
+        
         int nf, nc, n;
 
         nc = tblTablaInicial.getColumnCount();
@@ -335,7 +335,9 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_cmdLlenadoAutomaticoActionPerformed
 
     private void cmdOperacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdOperacionActionPerformed
+
         int op;
+
         op = cmbOperaciones.getSelectedIndex();
         Helper.limpiadoTabla(tblTablaResultado);
 
@@ -385,6 +387,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_cmdLimpiarActionPerformed
 
     private void cmdLlenadoManualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdLlenadoManualActionPerformed
+
         int nf, nc;
         int n;
         int sw, res;
@@ -426,7 +429,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_cmdLlenadoManualActionPerformed
 
     private void txtNumerodeFilasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumerodeFilasKeyTyped
-         char c = evt.getKeyChar();
+        char c = evt.getKeyChar();
 
         if (!Character.isDigit(c)) {
             getToolkit().beep();
